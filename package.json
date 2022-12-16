@@ -1,0 +1,25 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "A tech blog that utilizes an MVC layout to personalize dashboards for individual users",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manyLizards/tech-blog.git"
+  },
+  "keywords": [
+    "MVC",
+    "sequelize",
+    "mySQL2"
+  ],
+  "author": "Jordan Barringer (manyLizards)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manyLizards/tech-blog/issues"
+  },
+  "homepage": "https://github.com/manyLizards/tech-blog#readme"
+}
