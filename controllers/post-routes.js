@@ -8,4 +8,9 @@ router.get('/', async (req, res) => {
     res.render('all');
 });
 
-module.eports = router;
+//Get a post
+router.get('/post/:num', async (req, res) => {
+    return res.render('post', posts[req.params.num - 1]);
+});
+
+module.exports = router;
