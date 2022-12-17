@@ -5,14 +5,21 @@ async function editFormHandler(event) {
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ]
-    const response = await fetch(`/models/post/${id}`), {
+    const response = await fetch(`/models/post/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             post_title,
             post_contents
-        })
+        }),
         headers: {
-            'Content-Type': 'application/json'
-        }
+            'Content-Type': 'application/json',
+        },
+    });
+    if (response.ok) {
+        document.location.replace(`/dish/${id}`);
+    } else {
+        alert('Failed to edit dish');
     }
 }
+
+document.querySelector('.edit-post-form').addEventListener('submit', editFormhandler);
