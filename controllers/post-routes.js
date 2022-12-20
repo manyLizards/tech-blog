@@ -30,4 +30,26 @@ router.post('/', async(req, res) => {
     }
 });
 
+//send data to model so one post can be updated with new data
+router.put('/:id', async (req, res) => {
+    try {
+        const post = await Post.update(
+            {
+                post_title: req.body.post_title,
+                post_contents: req.body.post_contents,
+                post_date: req.body.post_date
+            },
+            {
+                where: {
+                    id: req.params.id,
+                }
+            }
+        );
+        //send data back to handler
+        res.status(200).json(post);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
