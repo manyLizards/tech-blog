@@ -1,6 +1,9 @@
 //route commands to Model and View ports
 
-const router = require('express').Router()
+const router = require('express').Router();
+
+//pull post model
+const Post = require('../models/Post');
 
 //GET route for getting all of the posts for the homepage
 
