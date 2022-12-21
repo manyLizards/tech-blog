@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers/post-routes'))
+app.use(require('./controllers/api/post-routes'))
 
 //starts the server to begin listening
 app.listen(PORT, () => {
